@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
 import styled from "styled-components";
@@ -14,8 +13,8 @@ async function api(url, method, body = undefined){
     body: body !== undefined ? JSON.stringify(body) : body,
     method: method,
     headers : {
-      Accept: "aplication/json",
-      "Content-Type": "aplication/json",
+      Accept: "application/json",
+      "Content-Type": "application/json",
     },
   }).then((res)=> res.json());
 }
@@ -23,7 +22,7 @@ async function api(url, method, body = undefined){
 //@returns lista de produtos
 
 async function apiGetProducts(){
-  const data = await api("products", "GET");
+  const data = await api("/products", "GET");
   return data.products;
 }
 
