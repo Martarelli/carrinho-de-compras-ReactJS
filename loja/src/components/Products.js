@@ -61,12 +61,9 @@ function Products({ products, onClick, isLoading = false}){
     return (
         <SSection>
             {isLoading 
-            ? "Carregando..." 
-            : products.lenght > 0 
-            ? products.map((product) => (
+            ? "Carregando..." : products.map((product) => (
                 <Product key={product.id} product={product} onClick={onClick} />
-            ))
-            : "Nenhum produto encontrado!"}
+            )) }
         </SSection>
     );
 }

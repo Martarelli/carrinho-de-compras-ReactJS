@@ -44,7 +44,7 @@ function App() {
     setProducts(await apiGetProducts()); //Salva lista de produtos na variavel global
     setProductsLoading(false); //Desativa loading de produtos
   }
-  
+
   //Salva o carrinho
   async function submitCart(){
     setCartLoading(true); //Ativa loading do carrinho
@@ -92,6 +92,7 @@ function App() {
     grid-template-rows: 1fr;
   `;
 
+  
   return (
     <SMain>
       <Cart
